@@ -40,7 +40,7 @@
 
   .content-setup-btn {
     width:320px;
-    height:470px;
+    height:300px;
     /* display:inline-block; */
     /* border:1px solid black; */
     padding:5px;
@@ -104,19 +104,28 @@
       
       <br><br>
 
+      <div style=" width:100%; height:30px;">
+        <div style="width:120px; float:left; padding:10px 0 0 50px;">
+          Pen status
+        </div>
+        <div style="width:120px; float:left;">
+          <div id="pen-display" style="height:2px; width:2px; border:0.5px solid black; margin-top:19px; margin-left:10px; border-radius: 50%; background-color:white;"></div>
+        </div>
+      </div>
+
+      <br><br>
+
       <div>
-        pen size
-        <input id="range-selector" type="range" value="1" min="0.1" max="10" step="0.1">
+        Pen size
+        <div style="padding-top:0px;"><input id="range-selector" type="range" value="1" min="0.1" max="10" step="0.1"></div>
+        
         <!-- 現在の線の太さを表す数値を表示するための要素 -->
         <!-- input要素のスライドを動かすたびに値が更新される -->
         <span id="line-width">1</span>
       </div>
 
       <br> <br>
-      <div style=" width:100%; float:left; height:30px;">
-        Current pen
-        <div id="pen-display" style="height:2px; width:2px; border:0.5px solid black; margin:auto; margin-top:19px; border-radius: 50%; background-color:black;"></div>
-      </div>
+      
       <!-- <div style="width:50%; float:left; height:30px;">
         Current color
         <div id="color-display" style="margin-top:10px; height:20px; width:20px; border:1px solid black; margin:auto; margin-top:5px;"></div>
@@ -130,7 +139,7 @@
       <button id="clear-btn">Reset canvas</button>
 
       <!-- 色を選択できるカラーパレットを用意する。 -->
-  <span id="color-palette"></span>
+  <span id="color-palette" style="display:none;"></span>
 
     </div>
 

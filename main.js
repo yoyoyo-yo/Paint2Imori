@@ -156,6 +156,7 @@ window.addEventListener('load', () => {
       document.getElementById("pen-display").style.width = width * 2 + "px";
       document.getElementById("pen-display").style.height = width * 2 + "px";
       document.getElementById("pen-display").style.marginTop = (20 - width) + "px";
+      document.getElementById("pen-display").style.marginLeft = (10 - width) + "px";
     });
   }
 
@@ -169,7 +170,7 @@ window.addEventListener('load', () => {
 
   const dl_button = document.getElementById("download");
   dl_button.onclick = function() {
-    let canvas = document.getElementById("draw-area");
+    let canvas = document.getElementById("result-img");
     console.dir(canvas)
     let base64 = canvas.toDataURL("image/png");
 
