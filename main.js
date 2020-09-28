@@ -87,7 +87,7 @@ window.addEventListener('load', () => {
   }
 
   function initEventHandler() {
-    const clearButton = document.querySelector('#clear-button');
+    const clearButton = document.querySelector('#clear-btn');
     clearButton.addEventListener('click', () => {
       context.fillStyle = "#000000"; //筆に白い絵の具をつけて
       context.fillRect(0, 0, canvas.width, canvas.height); //四角を描く
@@ -95,17 +95,20 @@ window.addEventListener('load', () => {
     });
 
     // 消しゴムモードを選択したときの挙動
-    const eraserButton = document.querySelector('#eraser-button');
+    const eraserButton = document.querySelector('#eraser-btn');
     eraserButton.addEventListener('click', () => {
       // 消しゴムと同等の機能を実装したい場合は現在選択している線の色を
       // 白(#FFFFFF)に変更するだけでよい
       currentColor = '#000000';
+      joe.set(currentColor);
+      document.getElementById("pen-display").style.backgroundColor = currentColor;
     });
 
-    const blackButton = document.querySelector('#black-button');
+    const blackButton = document.querySelector('#pen-btn');
     blackButton.addEventListener('click', () => {
       currentColor = '#ffffff';
       joe.set(currentColor);
+      document.getElementById("pen-display").style.backgroundColor = currentColor;
     });
 
     canvas.addEventListener('mousedown', dragStart);
@@ -127,6 +130,7 @@ window.addEventListener('load', () => {
       // color.hex()を実行すると '#FF0000' のような形式で色情報を16進数の形式で受け取れる
       // draw関数の手前で定義されている、線の色を保持する変数に代入して色情報を変更する
       currentColor = color.hex();
+      document.getElementById("pen-display").style.backgroundColor = currentColor;
     });
   }
 
@@ -148,6 +152,10 @@ window.addEventListener('load', () => {
  
       // 更新した線の太さ値(数値)を<input id="range-selector" type="range">の右側に表示する
       textForCurrentSize.innerText = width;
+
+      document.getElementById("pen-display").style.width = width * 2 + "px";
+      document.getElementById("pen-display").style.height = width * 2 + "px";
+      document.getElementById("pen-display").style.marginTop = (20 - width) + "px";
     });
   }
 
