@@ -47,6 +47,15 @@
     margin:5px 10px;
     box-shadow:0 6px 6px #666666;
   }
+
+  .content-sample {
+    width:260px;
+    height:260px;
+    /* display:inline-block; */
+    /* border:1px solid black; */
+    padding:5px;
+    margin: 5px 20px;
+  }
   </style>
     
 
@@ -58,41 +67,13 @@
 
   <div class="content-container">
     <div class="content-box">
-      <!-- <img src="icons/foodmark1.png" class="icon-img" height=128, width=128 border=1><br>
-      <div class="tag-container">
-        <a class="tag">食べ物</a> <a class="tag">食事</a> <a class="tag">レストラン</a>
-      </div>
-      <div class="dl-btn-container">
-        <a href="icons/foodmark1.png" download="foodmark1.png" class='dl-btn' style="--content-before: ''; --content-after: ''"><img src="assets/dl_icon.png" width=20 heigh=20></a>
-        <a href="icons/foodmark1_tran.png" download="foodmark1_tran.png" class='dl-btn' style="--content-before: ''; --content-after: ''"><img src="assets/dl_icon.png" width=20 heigh=20></a>
-      </div> -->
-      <canvas id="draw-area" width="256px" height="256px" style="border: 1px solid #ffffff; margin-right:50px;"></canvas>
+      <canvas id="draw-area" width="256" height="256" style="border: 1px solid #ffffff; margin-right:50px;"></canvas>
     </div>
 
     <div class="content-box">
-      <!-- <img src="icons/wine2.png" class="icon-img" height=128, width=128 border=1><br>
-      <div class="tag-container">
-        <a class="tag">飲み物</a> <a class="tag">ワイン</a>
-      </div>
-      <div class="dl-btn-container">
-        <a href="icons/wine2.png" download="wine2.png" class='dl-btn' style="--content-before: ''; --content-after: ''"><img src="assets/dl_icon.png" width=20 heigh=20></a>
-        <a href="icons/wine2_tran.png" download="wine2_tran.png" class='dl-btn' style="--content-before: ''; --content-after: ''"><img src="assets/dl_icon.png" width=20 heigh=20></a>
-      </div> -->
-      <canvas id="result-img" height="256px" width="256px" style="border:1px solid black;"></canvas>
+      <canvas id="result-img" height="256" width="256"></canvas>
     </div>
   </div>
-
-  <!-- <div style="width:100%; text-align:center;">
-    <div class="canvas-block">
-      <canvas id="draw-area" width="256px" height="256px" style="border: 1px solid #ffffff; margin-right:50px;"></canvas>
-    </div>
-
-    <div class="canvas-block">
-      <canvas id="result-img" height="256px" width="256px" style="border:1px solid black;"></canvas>
-    </div>
-  </div> -->
-
-  <!-- <div style="clear:left;"></div> -->
 
   <br>
 
@@ -131,9 +112,9 @@
         <div id="color-display" style="margin-top:10px; height:20px; width:20px; border:1px solid black; margin:auto; margin-top:5px;"></div>
       </div> -->
 
-      <div style="clear:left;">
-
-      </div>
+      <!-- <a href="" onclick="javascript:sample_read(1); return false;">LoadSample1</a><br>
+      <a href="" onclick="javascript:sample_read(2); return false;">LoadSample2</a><br>
+      <a href="" onclick="javascript:sample_read(3); return false;">LoadSample3</a><br> -->
 
       <br><br>
       <button id="clear-btn">Reset canvas</button>
@@ -181,6 +162,29 @@
   </div> -->
 
   <br>
+
+  <div class="content-container">
+    <div class="content-sample">
+      <a href="" onclick="javascript:sample_read(1); return false;">Load sample1</a><br>
+      <img src="assets/sample_input1.png" width=256 height=256>
+    </div>
+    <div class="content-sample">
+      <a href="" onclick="javascript:sample_read(2); return false;">Load sample2</a><br>
+      <img src="assets/sample_input2.png" width=256 height=256>
+    </div>
+    <div class="content-sample">
+      <a href="" onclick="javascript:sample_read(3); return false;">Load sample3</a><br>
+      <img src="assets/sample_input3.png" width=256 height=256>
+    </div>
+    <div class="content-sample">
+      <a href="" onclick="javascript:sample_read(4); return false;">Load sample4</a><br>
+      <img src="assets/sample_input4.png" width=256 height=256>
+    </div>
+    <div class="content-sample">
+      <a href="" onclick="javascript:sample_read(5); return false;">Load sample5</a><br>
+      <img src="assets/sample_input5.png" width=256 height=256>
+    </div>
+  </div>
 
 
   <!-- 色変更に使うライブラリを導入 https://github.com/bebraw/colorjoe -->

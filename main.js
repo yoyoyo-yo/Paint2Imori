@@ -177,3 +177,22 @@ window.addEventListener('load', () => {
     document.getElementById("download").href = base64;
   };
 });
+
+
+
+function sample_read(x) {
+  var canvas = document.getElementById('draw-area');
+  if (canvas.getContext) {
+    
+    var context = canvas.getContext('2d');
+    var img = new Image();
+    img.src = "./assets/sample_input" + x + ".png";
+    // canvas.height = 256;
+    // canvas.width = 256;
+    // canvas.width = image.width;
+    // canvas.height = image.height;
+    console.log(img);
+    context.drawImage(img, 0, 0);
+    console.log("sample read " + x);
+  }
+}
