@@ -1,0 +1,148 @@
+.canvas-block {
+  float:left;
+  width:50%;
+}
+
+.content-container{
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  display:flex;
+  flex-wrap:wrap;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 5px;
+  justify-content: center; /* center items horizontally, in this case */
+  align-items: center;     /* center items vertically, in this case */
+}
+
+.content-box {
+  width:260px;
+  height:340px;
+  /* display:inline-block; */
+  /* border:1px solid black; */
+  padding:5px;
+  margin: 5px 40px;
+  box-shadow:0 6px 6px #666666;
+  position:relative;
+}
+
+.content-setup-btn {
+  width:320px;
+  height:300px;
+  /* display:inline-block; */
+  /* border:1px solid black; */
+  padding:5px;
+  margin:5px 10px;
+  box-shadow:0 6px 6px #666666;
+}
+
+.content-sample {
+  width:260px;
+  height:260px;
+  /* display:inline-block; */
+  /* border:1px solid black; */
+  padding:5px;
+  margin: 5px 20px;
+}
+
+/*
+  Predict button
+*/
+
+#predict-btn{
+  display:block;
+  cursor:pointer;
+  border: 1px solid black;
+  opacity: 0;
+  text-decoration: none;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  margin: 10px 80px;
+  line-height:160px;
+  transition:.5s;
+  font-size: 20px;
+  background-color:rgb(17, 24, 88);
+  color:white;
+}
+
+#predict-btn:hover{
+  background-color:rgb(5, 31, 70);
+  color:white;
+}
+
+/*
+  Download button
+*/
+
+#download{
+  display:block;
+  cursor:pointer;
+  border: 1px solid rgb(100,100,100);
+  text-decoration: none;
+  width: 200px;
+  height: 40px;
+  margin: 20px 60px;
+  line-height:40px;
+  transition:.5s;
+  font-size: 10px;
+  color:black;
+}
+
+#download:hover{
+  background-color:rgb(11, 52, 114);
+  color:white;
+}
+
+
+/* 吹き出し */
+.balloon {
+  position: relative;
+  display: inline-block;
+  padding: 7px 10px;
+  width: 200px;
+  color: white;
+  font-size: 12px;
+  background: rgb(233, 70, 70);
+  border-radius: 15px;
+  transition: .7s;
+}
+
+.balloon:before {
+  /* content: "";
+  position: absolute;
+  top: 50%;
+  right: -20px;
+  margin-top: -10px;
+  border: 10px solid transparent;
+  border-left: 15px solid rgba(233, 70, 70);
+  z-index: 0; */
+  content: '';
+  position: absolute;
+  left: 70px;
+  top: -15px;
+  display: block;
+  width: 0;
+  height: 0;
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid rgba(233, 70, 70);
+  border-left: 15px solid transparent;
+}
+
+.balloon p {
+  margin: 0;
+  padding: 0;
+}
+
+.sample-img{
+  transition:.3s;
+  border:3px solid white;
+}
+
+.sample-img:hover{
+  border:3px solid greenyellow;
+}
+
+#draw-area{
+  cursor:pointer;
+}

@@ -1,16 +1,3 @@
-// class list
-// const class_names = ["アカハライモリ" , "シリケンイモリ", "イボイモリ", "マダライモリ",
-//                     "マーブルサラマンダー", "レッドサラマンダー", "ミナミイボイモリ", "ミナミクシイモリ", 
-//                     "イベリアトゲイモリ", "ウーパールーパー", "ホライモリ", "アシナシイモリ"];
-
-const class_names = ['アカハライモリ', 'アシナシイモリ', 'ブチイモリ', 'ファイアーサラマンダー', 'ホライモリ', 
-                    'イベリアトゲイモリ', 'イボイモリ', 'マダライモリ', 'マーブルサラマンダー', 'メキシコサラマンダー',
-                     'ミナミイボイモリ', 'ミナミクシイモリ', 'シリケンイモリ', 'タイガーサラマンダー']
-
-const class_names_reverse = Array.from(class_names).reverse();
-
-const class_num = class_names.length;
-
 var model;
 
 var predicted_flag = false;
@@ -32,7 +19,7 @@ async function model_load() {
   console.log('Successfully loaded model');
 
   document.getElementById("predict-btn").style.opacity = 1;
-  document.getElementById("predict-btn").style.display = "block";
+  //document.getElementById("predict-btn").style.display = "block";
 
   model_loaded = true;
 }
